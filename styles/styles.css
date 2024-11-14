@@ -4,12 +4,12 @@
     --fundo-preto: #000000;
     --fundo-branco: #ffffff;
     --text: #ffffff;
+    --text-ep: #000000;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 /* Cabeçalho */
 header {
     position: relative;
-
+    
     & nav{
         background-color: var(--fundo-amarelo);
         display: flex;
@@ -37,6 +37,8 @@ header {
     }
     & nav a:hover{
         color: var(--fundo-branco);
+        background-color: #fdec01;
+        padding: 5px;
     }
     & img{
         width: 100%;
@@ -62,6 +64,19 @@ header {
     }
 }
 
+#amarelado{
+    position: relative;
+    background-image: url('../img/fundo.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+
+    & #ftAmarelo{
+        background-color: rgba(255, 238, 0, 0.6);
+        padding: 50rch;
+    }
+}
+
 /* Sucesso de Audiência */
 .sucesso-audiencia {
     background-color: var(--fundo-amarelo);
@@ -75,13 +90,14 @@ header {
 
 .audiencia-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     text-align: left;
     color: var(--fundo-preto);
 
     & p{
         line-height: 1.6;
+        flex: 1;
     }
 }
 
@@ -120,13 +136,16 @@ header {
 /* Episódios */
 .episodios {
     padding: 40px 20px;
-    background-color: var(--fundo-preto);
-    color: var(--text);
+    background-color: white;
+    color: var(--text-ep);
 
     & h2{
         letter-spacing: 5px;
         margin-bottom: 20px;
-        color: var(--text);
+        color: var(--text-ep);
+    }
+    & p{
+        color: var(--text-ep);
     }
 }
 
@@ -186,6 +205,10 @@ header {
     }
 }
 
+#logoBad {
+    width: 100%;
+    height: 100% auto;
+}
 
 /*Rodapé*/
 footer#rodape {
