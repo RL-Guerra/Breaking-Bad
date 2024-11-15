@@ -7,7 +7,7 @@
     --text-ep: #000000;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -33,12 +33,12 @@ header {
         text-decoration: none;
         margin: 0 15px;
         font-weight: bold;
-        transition: color 0.3s ease;
     }
     & nav a:hover{
         color: var(--fundo-branco);
-        background-color: #fdec01;
+        background-color: #2bfd01;
         padding: 5px;
+        transition: 0.3s;
     }
     & img{
         width: 100%;
@@ -46,7 +46,6 @@ header {
         max-height: 500px;
     }
 }
-
 
 /* Sinopse */
 .sinopse {
@@ -64,14 +63,15 @@ header {
     }
 }
 
-#amarelado{
+/* Fundo Amarelo */
+#foto-amarela {
     position: relative;
     background-image: url('../img/fundo.jpeg');
     background-size: cover;
     background-position: center;
     padding: 0;
 
-    & #ftAmarelo{
+    & #fundo-amarelo{
         background-color: rgba(255, 238, 0, 0.6);
         padding: 50rch;
     }
@@ -143,6 +143,7 @@ header {
         letter-spacing: 5px;
         margin-bottom: 20px;
         color: var(--text-ep);
+        padding-left: 8.5%;
     }
     & p{
         color: var(--text-ep);
@@ -151,8 +152,9 @@ header {
 
 .episodio {
     display: flex;
-    flex-direction: row; /* Imagem à esquerda e texto à direita por padrão */
+    flex-direction: row;
     align-items: center;
+    text-align: justify;
     gap: 20px;
     margin-bottom: 20px;
     color: var(--text);
@@ -168,13 +170,14 @@ header {
         line-height: 1.6;
     }
 }
+
 /* Quando a classe 'reverse' for aplicada, inverte a ordem */
 .episodio.reverse {
-    flex-direction: row-reverse; /* Imagem à direita e texto à esquerda */
+    flex-direction: row-reverse;
 }
 
+/* Para dispositivos menores, exibe as imagens e textos empilhados */
 @media (max-width: 768px) {
-    /* Para dispositivos menores, exibe as imagens e textos empilhados */
     .episodio {
         flex-direction: column;
         text-align: left;
@@ -187,7 +190,6 @@ header {
         width: 100%;
     }
 }
-
 
 /* Curiosidade */
 .curiosidade {
@@ -212,21 +214,21 @@ header {
 
 /*Rodapé*/
 footer#rodape {
-    color: var(--text);
+    color: #ffffff;
     margin-top: auto;
     clear: both;
-    border-top: 1px solid var(--borda);
-    background-color: black;
+    border-top: 2px solid #363535;
+    background-color: #000000;
 
     & p{
         text-align: center;
     }
     & a{
         text-decoration: none;
-        color: var(--titulo);
+        color: #ffffff;
     }
     & a:hover{
-        color: blue;
+        color: #0000ff;
         text-decoration: underline;
     }
 }
